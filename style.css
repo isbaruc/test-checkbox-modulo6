@@ -1,0 +1,224 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.general-content {
+   background-color: cadetblue;
+   color: azure;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h2 {
+   width: 600px;
+}
+
+/* Estilos Modal */
+
+.backdrop {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.7);
+   opacity: 1;
+   visibility: visible;
+   pointer-events: auto;
+   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+   width: 528px;
+   height: 580px;
+   background-color: #ffffff;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   padding: 40px;
+}
+
+.close-btn {
+   position: absolute;
+   top: 8px;
+   right: 8px;
+   padding: 5px;
+   width: 30px;
+   height: 30px;
+   border: 1px solid #0000001a;
+   border-radius: 50%;
+   background-color: transparent;
+   cursor: pointer;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:focus,
+.close-btn:hover {
+   fill: red;
+}
+
+.is-hidden {
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+}
+
+.modal-form {
+   display: flex;
+   flex-direction: column;
+}
+
+.modal-form-head {
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 1.15;
+   text-align: center;
+   letter-spacing: 0.03em;
+   color: #2196f3;
+   margin-bottom: 12px;
+}
+
+.modal-form-field {
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 1.16;
+   letter-spacing: 0.01em;
+   color: #2196f3;
+   margin-bottom: 14px;
+}
+.modal-form-input-wrapper {
+   position: relative;
+   display: block;
+   margin-top: 4px;
+}
+
+.modal-form-input {
+   width: 100%;
+   height: 40px;
+   border: 1px solid rgba(33, 33, 33, 0.2);
+   box-sizing: border-box;
+   border-radius: 4px;
+   padding-left: 42px;
+   cursor: pointer;
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus {
+   outline: none;
+   border: 1px solid #2196f3;
+}
+
+.modal-form-icon {
+   position: absolute;
+   display: block;
+   top: 50%;
+   left: 15px;
+   transform: translateY(-50%);
+   width: 14px;
+   height: 14px;
+}
+
+.modal-form-input:focus + .modal-form-icon {
+   fill: red;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-message {
+   width: 448px;
+   height: 120px;
+   margin-top: 4px;
+   border: 1px solid rgba(33, 33, 33, 0.2);
+   box-sizing: border-box;
+   border-radius: 4px;
+   resize: none;
+   padding: 12px 16px;
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-message:focus {
+   outline: none;
+   border-color: red;
+}
+
+.modal-form-message::placeholder {
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 16px;
+   letter-spacing: 0.01em;
+   color: rgba(117, 117, 117, 0.5);
+}
+
+/* Checkbox */
+
+.c {
+   display: flex;
+}
+
+.visually-hidden {
+   position: absolute !important;
+   clip: rect(1px 1px 1px 1px);
+   padding: 0 !important;
+   border: 0 !important;
+   height: 0px !important;
+   width: 0px !important;
+   overflow: hidden;
+}
+
+.modal-form-checkbox-label {
+   display: flex;
+   align-items: center;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+   color: green;
+   margin-bottom: 30px;
+}
+
+.modal-form-checkbox-label::before {
+   content: '';
+   display: block;
+   width: 20px;
+   height: 15px;
+   border: 1px solid green;
+   border-radius: 2px;
+   cursor: pointer;
+   margin-right: 9px;
+   margin-bottom: 20px;
+}
+
+.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
+   background-image: url(./images/iconcheck.svg);
+   border-color: #2196f3;
+   background-color: #2196f3;
+}
+
+.modal-form-btn {
+   background-color: #2196f3;
+   display: inline-block;
+   align-items: center;
+   align-self: center;
+   text-align: center;
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 1.8;
+   letter-spacing: 0.06em;
+   width: 200px;
+   height: 50px;
+   padding: 10px 56px;
+   cursor: pointer;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   border: none;
+}
