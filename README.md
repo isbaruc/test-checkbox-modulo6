@@ -2,7 +2,7 @@
 
 1. crearles un `<div>` (y asignas display: flex) que dentro tendrá el `<input>` y el `<label>`
 2. el `<input>` crea una casilla por default, pero como no es esta la que queremos que se vea, pues le agregamos una clase que la oculte que puede quedar de la siguiente forma
-   `.visually-hidden {
+   <br>`.visually-hidden {
    position: absolute !important;
    clip: rect(1px 1px 1px 1px);
    padding: 0 !important;
@@ -10,17 +10,17 @@
    height: 0px !important;
    width: 0px !important;
    overflow: hidden;
-}`
-   \n:bulb: Hasta aquí ya no tenemos la casilla sino solo el texto :bulb:
+}`<br>
+   <br>:bulb: Hasta aquí ya no tenemos la casilla sino solo el texto :bulb:<br><br>
 3. Después, al `<label>` a través de una clase le asignaremos el tamaño que tendrá la casilla personalizada y sus demás atributos
-   :bulb: Nota que usamos ::before ya que pues la casilla va "antes" del texto (y en el label está nuestro texto) :bulb:
+   <br><br>:bulb: Nota que usamos ::before ya que pues la casilla va "antes" del texto (y en el label está nuestro texto) :bulb:<br><br>
 4. Ahora crearemos en el `<inpu>` una clase (en este caso la nombré modal-form-checkbox ) a la que declararemos los siguientes atributos
-   `.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
+   <br>`.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
    background-image: url(./images/iconcheck.svg);
    border-color: #2196f3;
    background-color: #2196f3;
-}`
-   :bulb: Aquí estamos asignandole que imagen tendrá el fondo de la casilla cuando la el estado sea checked y cual será el elemento que se modifica (::before) :bulb:
+}`<br>
+   <br>:bulb: Aquí estamos asignandole que imagen tendrá el fondo de la casilla cuando la el estado sea checked y cual será el elemento que se modifica (::before) :bulb:<br><br>
 5. Por último asignaremos los estilos para el acomodo de los elementos
    `.modal-form-checkbox-label {
    display: flex;
