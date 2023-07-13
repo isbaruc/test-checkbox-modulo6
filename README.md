@@ -11,7 +11,7 @@
    width: 0px !important;
    overflow: hidden;
 }`
-   :bulb: Hasta aquí ya no tenemos la casilla sino solo el texto :bulb:
+   \n:bulb: Hasta aquí ya no tenemos la casilla sino solo el texto :bulb:
 3. Después, al `<label>` a través de una clase le asignaremos el tamaño que tendrá la casilla personalizada y sus demás atributos
    :bulb: Nota que usamos ::before ya que pues la casilla va "antes" del texto (y en el label está nuestro texto) :bulb:
 4. Ahora crearemos en el `<inpu>` una clase (en este caso la nombré modal-form-checkbox ) a la que declararemos los siguientes atributos
